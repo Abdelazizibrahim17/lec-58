@@ -1,0 +1,59 @@
+@baseUrl = http://localhost:8080
+@studentId = 1
+@courseId = 1
+@instructorId = 1
+
+### POST /api/students
+POST {{baseUrl}}/api/students
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com"
+}
+
+### POST /api/instructors
+POST {{baseUrl}}/api/instructors
+Content-Type: application/json
+
+{
+  "name": "Dr. Smith",
+  "email": "smith@example.com"
+}
+
+### POST /api/courses
+POST {{baseUrl}}/api/courses
+Content-Type: application/json
+
+{
+  "title": "Java Programming",
+  "description": "Java fundamentals"
+}
+
+### PUT /api/courses/1/instructor/1
+PUT {{baseUrl}}/api/courses/{{courseId}}/instructor/{{instructorId}}
+
+### POST /api/students/1/courses/1
+POST {{baseUrl}}/api/students/{{studentId}}/courses/{{courseId}}
+
+### GET /api/students
+GET {{baseUrl}}/api/students
+
+### GET /api/students/1
+GET {{baseUrl}}/api/students/{{studentId}}
+
+### GET /api/courses
+GET {{baseUrl}}/api/courses
+
+### GET /api/courses/1
+GET {{baseUrl}}/api/courses/{{courseId}}
+
+### GET /api/instructors
+GET {{baseUrl}}/api/instructors
+
+### GET /api/instructors/1
+GET {{baseUrl}}/api/instructors/{{instructorId}}
+
+### GET /api/instructors/1/courses
+GET {{baseUrl}}/api/instructors/{{instructorId}}/courses
+
